@@ -17,7 +17,7 @@ defmodule PhoenixNestedFormValidationWeb.Router do
   scope "/", PhoenixNestedFormValidationWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", HomeLive, :home
   end
 
   # Other scopes may use custom stacks.

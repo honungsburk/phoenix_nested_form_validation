@@ -9,7 +9,6 @@ defmodule PhoenixNestedFormValidation.Application do
   def start(_type, _args) do
     children = [
       PhoenixNestedFormValidationWeb.Telemetry,
-      PhoenixNestedFormValidation.Repo,
       {DNSCluster, query: Application.get_env(:phoenix_nested_form_validation, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: PhoenixNestedFormValidation.PubSub},
       # Start the Finch HTTP client for sending emails

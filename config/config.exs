@@ -8,7 +8,6 @@
 import Config
 
 config :phoenix_nested_form_validation,
-  ecto_repos: [PhoenixNestedFormValidation.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
