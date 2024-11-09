@@ -15,7 +15,7 @@ defmodule ExampleForm do
     |> cast(attrs, [:field_one])
     |> cast_embed(:nested_form)
     |> validate_required([:field_one])
-    |> validate_length(:field_one, max: 255, min: 2)
+    |> validate_length(:field_one, is: 2000)
   end
 end
 
@@ -31,7 +31,7 @@ defmodule NestedExampleForm do
     nested_form
     |> cast(attrs, [:field_two])
     |> validate_required([:field_two])
-    |> validate_length(:field_two, max: 255, min: 2)
+    |> validate_length(:field_two, is: 2000)
   end
 end
 
